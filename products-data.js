@@ -2,7 +2,7 @@ export const plants = [
     {
         id: '1',
         name: 'Monstera',
-        image: 'http://placekitten.com/200/200',
+        image: '../assets/monstera.webp',
         description: 'Vine like, evergreen plant, with large green split-leaves.',
         category: 'Monstera deliciosa', 
         sun: 'Bright indirect light', 
@@ -11,7 +11,7 @@ export const plants = [
     {
         id: '2',
         name: 'Pothos',
-        image: 'http://placekitten.com/200/200',
+        image: '../assets/pothos.jpeg',
         description: 'Vine like, evergreen plant with thick, waxy, green, heart-shaped leaves with splashes of yellow.',
         category: 'Epipremnum aureum', 
         sun: 'Moderate indoor light', 
@@ -21,7 +21,7 @@ export const plants = [
     {
         id: '3',
         name: 'Snake Plant',
-        image: 'http://placekitten.com/200/200',
+        image: '../assets/snake-plant.jpeg',
         description: 'Stemless evergreen plant, that is erect, fleshy, sharply-pointed, sword-shaped leaves are deep green with light horizontal stripes.',
         category: 'Dracaena trifasciata', 
         sun: 'Bright indirect light', 
@@ -31,7 +31,7 @@ export const plants = [
     {
         id: '4',
         name: 'Cactus',
-        image: 'http://placekitten.com/200/200',
+        image: '../assets/cactus.jpeg',
         description: 'Desert plant that has thick, leafless stems covered in prickly spines or sharp spikes.',
         category: 'Cactaceae', 
         sun: 'Direct sunlight', 
@@ -41,7 +41,7 @@ export const plants = [
     {
         id: '5',
         name: 'Fiddle Leaf Fig',
-        image: 'http://placekitten.com/200/200',
+        image: '../assets/fiddle-leaf-fig.jpeg',
         description: 'Evergreen plant with very large, heavily veined, violin-shaped leaves that grow upright',
         category: 'Ficus lyrata', 
         sun: 'Bright, filtered light', 

@@ -43,7 +43,7 @@ export function createPlants(plant){
 
     pButton.textContent = 'Add to Cart!';
 
-    li.append(pName, plantImage, pDescription, pCategory, pSun, pPrice);
+    li.append(pName, plantImage, pDescription, pCategory, pSun, pPrice, pButton);
 
     return li;
 }
