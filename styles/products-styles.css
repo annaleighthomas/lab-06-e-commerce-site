@@ -1,0 +1,102 @@
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: fantasy;
+    width: 500px;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+ 
+li {
+    border: 1px solid rgb(10, 66, 22);
+    margin: 20px;
+    padding: 15px;
+    color: rgba(13, 77, 13, 0.699);
+    width: 250px;
+}
+
+.plants {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+
+.name {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+header {
+    font-size: 30px;
+    text-align: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    font-family: fantasy;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+ */
