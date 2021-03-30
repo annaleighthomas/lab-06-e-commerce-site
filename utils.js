@@ -1,11 +1,11 @@
 export function createPlants(plant){
-    const li = document.createElement(li);
+    const li = document.createElement('li');
 
     li.classList.add('plant');
 
     const pId = document.createElement('p');
 
-    pName.classList.add('id');
+    pId.classList.add('id');
 
     const pName = document.createElement('p');
 
@@ -38,4 +38,12 @@ export function createPlants(plant){
         style: 'currency',
         currency: 'USD',
     }); 
+
+    const pButton = document.createElement('button');
+
+    pButton.textContent = 'Add to Cart!';
+
+    li.append(pName, plantImage, pDescription, pCategory, pSun, pPrice);
+
+    return li;
 }
