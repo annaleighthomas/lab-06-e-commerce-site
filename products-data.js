@@ -1,6 +1,6 @@
 export const plants = [
     {
-        id: '1',
+        id: 1,
         name: 'Monstera',
         image: '../assets/monstera.jpeg',
         description: 'Vine like, evergreen plant, with large green split-leaves.',
@@ -9,7 +9,7 @@ export const plants = [
         price: 36,
     },
     {
-        id: '2',
+        id: 2,
         name: 'Pothos',
         image: '../assets/pothos.jpeg',
         description: 'Vine like, evergreen plant with thick, waxy, green, heart-shaped leaves with splashes of yellow.',
@@ -19,7 +19,7 @@ export const plants = [
 
     },
     {
-        id: '3',
+        id: 3,
         name: 'Snake Plant',
         image: '../assets/snake-plant.jpeg',
         description: 'Stemless evergreen plant, that is erect, fleshy, sharply-pointed, sword-shaped leaves are deep green with light horizontal stripes.',
@@ -29,7 +29,7 @@ export const plants = [
 
     },
     {
-        id: '4',
+        id: 4,
         name: 'Cactus',
         image: '../assets/cactus.jpeg',
         description: 'Desert plant that has thick, leafless stems covered in prickly spines or sharp spikes.',
@@ -39,7 +39,7 @@ export const plants = [
 
     },
     {
-        id: '5',
+        id: 5,
         name: 'Fiddle Leaf Fig',
         image: '../assets/fiddle-leaf-fig.png',
         description: 'Evergreen plant with very large, heavily veined, violin-shaped leaves that grow upright',
