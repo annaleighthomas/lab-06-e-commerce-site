@@ -2,7 +2,7 @@ export const plants = [
     {
         id: '1',
         name: 'Monstera',
-        image: '../assets/monstera.webp',
+        image: '../assets/monstera.jpeg',
         description: 'Vine like, evergreen plant, with large green split-leaves.',
         category: 'Monstera deliciosa', 
         sun: 'Bright indirect light', 
@@ -41,10 +41,10 @@ export const plants = [
     {
         id: '5',
         name: 'Fiddle Leaf Fig',
-        image: '../assets/fiddle-leaf-fig.jpeg',
+        image: '../assets/fiddle-leaf-fig.png',
         description: 'Evergreen plant with very large, heavily veined, violin-shaped leaves that grow upright',
         category: 'Ficus lyrata', 
-        sun: 'Bright, filtered light', 
+        sun: 'Bright filtered light', 
         price: 25,
 
     },

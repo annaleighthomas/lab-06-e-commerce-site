@@ -47,6 +47,11 @@ li {
     width: 250px;
 }
 
+img {
+    width: 200px;
+    height: 200px;
+}
+
 .plants {
     display: flex;
     justify-content: center;
@@ -59,6 +64,7 @@ li {
 .name {
     font-weight: 900;
     font-size: 2rem;
+    color: black;
 }
 
 
