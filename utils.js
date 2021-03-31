@@ -47,3 +47,18 @@ export function createPlants(plant){
 
     return li;
 }
+
+export function findById(array, id) {
+    for (let item of array) {
+        if (item.id === id) {
+            return item; 
+        }
+    }
+    return null;
+
+}
+
+export function calcItemTotal(quantity, amount) {
+    const total = quantity * amount;
+    return Math.round(total * 100) / 100;
+}
