@@ -1,3 +1,5 @@
+
+
 export const cart = [
     {
         id: 1,
@@ -16,3 +18,4 @@ export const cart = [
         quantity: 3,
     },
 ];
+

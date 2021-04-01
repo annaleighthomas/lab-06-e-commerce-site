@@ -15,6 +15,7 @@ export function createTableRow(cartItem, aPlant) {
             currency: 'USD',
             style: 'currency'
         });
+        
     tdRowTotal.textContent = total;
 
     tr.append(tdName, tdQuantity, tdPrice, tdRowTotal);

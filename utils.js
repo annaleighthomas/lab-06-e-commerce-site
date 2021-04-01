@@ -62,3 +62,27 @@ export function calcItemTotal(quantity, amount) {
     const total = quantity * amount;
     return Math.round(total * 100) / 100;
 }
+
+export function calcOrderTotal(cartArray, plantArray) {
+    let orderTotal = 0;
+
+    for (let cartItem of cartArray) {
+        const selectedPlant = findById(plantArray, cartItem.id);
+
+        const plantSubtotal = selectedPlant.price * cartItem.quantity;
+
+        orderTotal = orderTotal + plantSubtotal;
+    }
+
+    const tr = document.createElement('tr');
+
+    const td1 = document.createElement('td');
+    const td2 = document.createElement('td');
+    const td3 = document.createElement('td');
+    
+    td3.textContent = `Total: $${orderTotal}.00`;
+
+    tr.append(td1, td2, td3);
+
+    return tr;
+}
