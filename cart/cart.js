@@ -1,10 +1,12 @@
 import { plants } from '../products-data.js';
-import { cart } from './cart-data.js';
 import { createTableRow } from './render-line-items.js';
 import { calcOrderTotal, findById } from '../utils.js';
+import { getCart } from './cart-api.js';
+
 
 const tBody = document.querySelector('tbody');
 
+const cart = getCart();
 
 
 for (let cartItem of cart) {
@@ -31,3 +33,22 @@ td3.textContent = orderTotal.toLocaleString('en-US', {
 
 tr.append(td1, td2, td3);
 tBody.append(tr);
+
+const buyButton = document.querySelector('.buy-button');
+
+if (td3.textContent === '$0.00') {
+    buyButton.disabled = true;
+}
+
+
+buyButton.addEventListener('click', () => {
+
+    const cart = getCart();
+
+    alert(JSON.stringify(cart));
+
+    localStorage.clear();
+
+    window.location = '/';
+
+});

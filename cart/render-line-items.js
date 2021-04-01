@@ -1,4 +1,5 @@
 export function createTableRow(cartItem, aPlant) {
+   
     const tr = document.createElement('tr');
     const tdName = document.createElement('td');
     const tdQuantity = document.createElement('td');
@@ -15,4 +16,5 @@ export function createTableRow(cartItem, aPlant) {
 
     return tr;
 }
+
 
