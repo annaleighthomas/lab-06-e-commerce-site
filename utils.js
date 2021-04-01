@@ -1,3 +1,5 @@
+import { addItemToCart } from '../cart/cart-api.js';
+
 export function createPlants(plant){
     const li = document.createElement('li');
 
@@ -41,7 +43,15 @@ export function createPlants(plant){
 
     const pButton = document.createElement('button');
 
+    pButton.value = plant.id;
+
     pButton.textContent = 'Add to Cart!';
+
+    pButton.addEventListener('click', () => {
+        addItemToCart(Number(pButton.value));
+        
+
+    });
 
     li.append(pName, plantImage, pDescription, pCategory, pSun, pPrice, pButton);
 
@@ -76,18 +86,3 @@ export function calcOrderTotal(cartArray, plantArray) {
 
     return orderTotal; 
 }
-
-    // const tr = document.createElement('tr');
-
-    // const td1 = document.createElement('td');
-    // const td2 = document.createElement('td');
-    // const td3 = document.createElement('td');
-    
-    // td3.textContent = orderTotal.toLocaleString('en-US', {
-    //     style: 'currency',
-    //     currency: 'USD',
-    // }); 
-
-    // tr.append(td1, td2, td3);
-
-    // return tr;
