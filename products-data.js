@@ -45,7 +45,7 @@ export const plants = [
         description: 'Evergreen plant with very large, heavily veined, violin-shaped leaves that grow upright',
         category: 'Ficus lyrata', 
         sun: 'Bright filtered light', 
-        price: 25,
+        price: 23,
 
     },
 

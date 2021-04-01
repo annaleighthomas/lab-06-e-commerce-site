@@ -80,7 +80,10 @@ export function calcOrderTotal(cartArray, plantArray) {
     const td2 = document.createElement('td');
     const td3 = document.createElement('td');
     
-    td3.textContent = `Total: $${orderTotal}.00`;
+    td3.textContent = orderTotal.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    }); 
 
     tr.append(td1, td2, td3);
 
