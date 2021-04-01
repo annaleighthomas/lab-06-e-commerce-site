@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { findById, calcItemTotal } from '../utils.js';
+import { findById, calcItemTotal, calcOrderTotal } from '../utils.js';
 import { createTableRow } from '../cart/render-line-items.js';
 import { cart } from '../cart/cart-data.js';
 
@@ -105,7 +105,7 @@ test('take in a item and a product and create a row', (expect) => {
     //Arrange
     // Set up your arguments and expectations
 
-    const expected = `<tr><td>Monstera</td><td>3</td><td>$36.00</td><td>$108.00</td></tr>`;
+    const expected = `<tr><td>Monstera</td><td>3</td><td>$36.00</td></tr>`;
     const someProduct = {
         id: 1,
         name: 'Monstera',
@@ -122,6 +122,34 @@ test('take in a item and a product and create a row', (expect) => {
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
+});
+
+
+test('takes cartArray and productArray and returns total', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = 15;
+    const cartArray = [
+        {
+            id: 1,
+            quantity: 3
+        }
+    ];
+
+    const plantArray = [
+        {
+            id: 1,
+            price: 5
+        }
+    ];
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = calcOrderTotal(cartArray, plantArray);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
 });
 
 

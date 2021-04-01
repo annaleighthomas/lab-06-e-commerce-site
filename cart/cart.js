@@ -16,6 +16,18 @@ for (let cartItem of cart) {
     tBody.append(tr);
 }
 
-const totalRow = calcOrderTotal(cart, plants);
+const orderTotal = calcOrderTotal(cart, plants);
 
-tBody.append(totalRow);
+const tr = document.createElement('tr');
+
+const td1 = document.createElement('td');
+const td2 = document.createElement('td');
+const td3 = document.createElement('td');
+
+td3.textContent = orderTotal.toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD',
+}); 
+
+tr.append(td1, td2, td3);
+tBody.append(tr);

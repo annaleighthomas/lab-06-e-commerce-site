@@ -69,23 +69,25 @@ export function calcOrderTotal(cartArray, plantArray) {
     for (let cartItem of cartArray) {
         const selectedPlant = findById(plantArray, cartItem.id);
 
-        const plantSubtotal = selectedPlant.price * cartItem.quantity;
+        const plantSubtotal = calcItemTotal(cartItem.quantity, selectedPlant.price);
 
         orderTotal = orderTotal + plantSubtotal;
     }
 
-    const tr = document.createElement('tr');
-
-    const td1 = document.createElement('td');
-    const td2 = document.createElement('td');
-    const td3 = document.createElement('td');
-    
-    td3.textContent = orderTotal.toLocaleString('en-US', {
-        style: 'currency',
-        currency: 'USD',
-    }); 
-
-    tr.append(td1, td2, td3);
-
-    return tr;
+    return orderTotal; 
 }
+
+    // const tr = document.createElement('tr');
+
+    // const td1 = document.createElement('td');
+    // const td2 = document.createElement('td');
+    // const td3 = document.createElement('td');
+    
+    // td3.textContent = orderTotal.toLocaleString('en-US', {
+    //     style: 'currency',
+    //     currency: 'USD',
+    // }); 
+
+    // tr.append(td1, td2, td3);
+
+    // return tr;
