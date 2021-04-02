@@ -36,7 +36,7 @@ tBody.append(tr);
 
 const buyButton = document.querySelector('.buy-button');
 
-if (td3.textContent === '$0.00') {
+if (orderTotal === 0) {
     buyButton.disabled = true;
 }
 

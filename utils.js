@@ -1,4 +1,4 @@
-import { addItemToCart } from '../cart/cart-api.js';
+import { addItemToCart } from './cart/cart-api.js';
 
 export function createPlants(plant){
     const li = document.createElement('li');
