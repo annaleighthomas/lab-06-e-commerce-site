@@ -44,10 +44,11 @@ export function createPlants(plant){
     const select = document.createElement('select');
     select.id = plant.id;
 
-    const option = document.createElement('option');
-    option.textContent = '1';
-    const option2 = document.createElement('option');
-    option2.textContent = '2';
+    for (let i = 0; i < 10; i++) {
+        const option = document.createElement('option');
+        option.textContent = i + 1;
+        select.append(option);
+    }
 
     const button = document.createElement('button');
 
@@ -56,11 +57,10 @@ export function createPlants(plant){
 
     button.addEventListener('click', () => {
         addItemToCart(Number(button.value), Number(select.value));  
-                                //1                    //1
-        console.log(select.value);
+
     });
 
-    select.append(option, option2);
+    
 
     li.append(pName, plantImage, pDescription, pCategory, pSun, pPrice, button, select);
 
