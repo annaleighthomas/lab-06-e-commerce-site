@@ -1,7 +1,7 @@
 import { plants } from '../products-data.js';
 import { createTableRow } from './render-line-items.js';
 import { calcOrderTotal, findById } from '../utils.js';
-import { getCart } from './cart-api.js';
+import { getCart, clearCart } from './cart-api.js';
 
 
 const tBody = document.querySelector('tbody');
@@ -47,8 +47,5 @@ buyButton.addEventListener('click', () => {
 
     alert(JSON.stringify(cart));
 
-    localStorage.clear();
-
-    window.location = '/';
-
+    clearCart();
 });

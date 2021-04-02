@@ -19,6 +19,13 @@ export function setCart(parsedCart) {
     localStorage.setItem(CART, stringifyCart);
 }
 
+export function clearCart() {
+
+    localStorage.clear();
+
+    window.location = '/';
+}
+
 export function addItemToCart(itemId, quantity) {
     
     const cart = getCart();

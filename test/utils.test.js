@@ -2,7 +2,7 @@
 // import { example } from '../example.js';
 import { findById, calcItemTotal, calcOrderTotal } from '../utils.js';
 import { createTableRow } from '../cart/render-line-items.js';
-import { cart } from '../cart/cart-data.js';
+
 
 const test = QUnit.test;
 
@@ -115,9 +115,15 @@ test('take in a item and a product and create a row', (expect) => {
         sun: 'Bright indirect light', 
         price: 36,
     };
+
+    const cart = {
+        id: 1,
+        quantity: 3
+    };
+
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = createTableRow(cart[0], someProduct);
+    const actual = createTableRow(cart, someProduct);
     console.log(actual);
     //Expect
     // Make assertions about what is expected versus the actual result
@@ -151,6 +157,23 @@ test('takes cartArray and productArray and returns total', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+test('time to test a function', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = true;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = true;
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+
+
 
 
 
