@@ -41,19 +41,29 @@ export function createPlants(plant){
         currency: 'USD',
     }); 
 
-    const pButton = document.createElement('button');
+    const select = document.createElement('select');
+    select.id = plant.id;
 
-    pButton.value = plant.id;
+    const option = document.createElement('option');
+    option.textContent = '1';
+    const option2 = document.createElement('option');
+    option2.textContent = '2';
 
-    pButton.textContent = 'Add to Cart!';
+    const button = document.createElement('button');
 
-    pButton.addEventListener('click', () => {
-        addItemToCart(Number(pButton.value));
-        
+    button.value = plant.id;
+    button.textContent = 'Add to Cart!';
 
+    button.addEventListener('click', () => {
+        addItemToCart(Number(button.value), Number(select.value));  
+                                //1                    //1
+        console.log(select.value);
     });
 
-    li.append(pName, plantImage, pDescription, pCategory, pSun, pPrice, pButton);
+    select.append(option, option2);
+
+    li.append(pName, plantImage, pDescription, pCategory, pSun, pPrice, button, select);
+
 
     return li;
 }
