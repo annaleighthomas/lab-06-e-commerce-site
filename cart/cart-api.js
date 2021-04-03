@@ -23,7 +23,7 @@ export function clearCart() {
 
     localStorage.clear();
 
-    window.location = '/';
+    window.location = '../';
 }
 
 export function addItemToCart(itemId, quantity) {
